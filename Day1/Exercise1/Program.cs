@@ -37,13 +37,16 @@ namespace Exercise1 {
    a[0] = char.ToUpper(a[0]);
    return new string(a);
   }
+  static string Build(int i,string name, int status){//returns: 1 plus the current counter, then the name thats been capitalized as the string, then uses the counter to pull the same index in a different array
+      return   i+1 + " " + CapFirst(name) + GetStatus(status);
+  }
   static void Main(string[] args) {
    int i = 0;
    string[] survivorList={"john","steve","tom","dick","harry","jacob","joe","billy","ashely","rebecca","johny","mike","nathan","jerry","william","michelle","nicole","allen","keith","anthony"};
    int[] statusList={1,1,1,1,1,1,1,1,4,3,3,3,1,1,1,1,2,3,2,2};
    Console.WriteLine("List of survivors ");
    foreach(string name in survivorList) {
-    Console.WriteLine(i+1 + " " + CapFirst(name.ToString()) + GetStatus(statusList[i]));//returns: 1 plus the current counter, then the name thats been capitalized as the string, then uses the counter to pull the same index in a different array
+    Console.WriteLine(Build(i,name.ToString(),statusList[i]));
     i++;
    }
   }

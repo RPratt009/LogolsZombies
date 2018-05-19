@@ -31,7 +31,12 @@ namespace testproject
                 Console.WriteLine(number);
                 number++;
             }
+
             Console.WriteLine("Hello World!");
         }
+        public void noReturn(int one,int two){
+            //does not return anything
+        }
+        
     }
 }
