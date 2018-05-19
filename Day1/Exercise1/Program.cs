@@ -32,7 +32,7 @@ namespace Exercise1 {
       }
    
   }
-  static string CapFirst(string s) {
+  static string CapFirst(string s) {//capitalize the first letter of the names
    char[] a = s.ToCharArray();
    a[0] = char.ToUpper(a[0]);
    return new string(a);
@@ -43,7 +43,7 @@ namespace Exercise1 {
    int[] statusList={1,1,1,1,1,1,1,1,4,3,3,3,1,1,1,1,2,3,2,2};
    Console.WriteLine("List of survivors ");
    foreach(string name in survivorList) {
-    Console.WriteLine(i+1 + " " + CapFirst(name.ToString()) + GetStatus(statusList[i]));
+    Console.WriteLine(i+1 + " " + CapFirst(name.ToString()) + GetStatus(statusList[i]));//returns: 1 plus the current counter, then the name thats been capitalized as the string, then uses the counter to pull the same index in a different array
     i++;
    }
   }
