@@ -1,0 +1,32 @@
+<header>
+    <div class="headertext">
+        <h1 id="header">Student Grade Report </h1>
+    </div>
+</header>
+
+<p class="text">
+    Please see students` grades for your class below:
+</p>
+<table border="1">
+    <thead>
+        <th >Person ID</th>
+        <th >First Name</th>
+        <th >Last Name</th>
+        <th >Grade ID</th>
+        <th >Letter Grade</th>
+    </thead>
+   
+    <tr *ngFor="let grade of grades"><!--"grades" name should match with "grades" in gradeReport.component.ts -->
+        <td>{{grade.personID}}</td>
+        <td>{{grade.firstName}}</td>
+        <td>{{grade.lastName}}</td>
+        <td>{{grade.gradeID}}</td>
+        <td>{{grade.letterGrade}}</td>
+        <!-- <td><button ng-click="Delete($index)">Delete</button></td> to add delete button-->
+
+    </tr>
+   
+</table>
+<p>To add new student please click on <a routerLink="/addStudent" >Add Student</a> </p>
+
+

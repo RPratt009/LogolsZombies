@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GradeBook.webapi.Controllers
+namespace GradeBook.webapi
 {
     [Route("api/[controller]")]
-    public class GradeReport : Controller
+   public class GradeReportController : Repository
     {
         GradeReportRepository repository;
 
@@ -32,16 +32,16 @@ namespace GradeBook.webapi.Controllers
 
         // POST api/GradeReport
         [HttpPost]
-        public void Post([FromBody]GradeReport personStatus)
+        public void Post([FromBody]GradeReport gradeReport)
         {
-            repository.Insert(personStatus);
+            repository.Insert(gradeReport);
         }
 
         // PUT api/GradeReport/5
         [HttpPut]
-        public void Put([FromBody]GradeReport personStatus)
+        public void Put([FromBody]GradeReport gradeReport)
         {
-            repository.Update(personStatus);
+            repository.Update(gradeReport);
         }
 
         // DELETE api/GradeReport/5
@@ -52,4 +52,3 @@ namespace GradeBook.webapi.Controllers
         }
     }
 }
-

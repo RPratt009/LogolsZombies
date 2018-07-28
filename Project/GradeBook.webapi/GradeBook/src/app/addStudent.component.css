@@ -1,0 +1,19 @@
+#header{
+    text-align: center;
+}
+.text{
+    color:darkgrey;
+}
+
+th{
+    color:lightgray;
+}
+.zombieimage{
+    float: center;
+       
+}
+.headertext{
+    max-width: 500px;
+    margin: 0 auto;
+    padding:5p 10px;
+}

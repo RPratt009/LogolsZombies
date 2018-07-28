@@ -6,7 +6,7 @@ namespace GradeBook.webapi
     using System.Data;
     using System.Text;
 
-    public class GradeBookReport
+    public class GradeReport
     {
         public int PersonID { get; set; }
         public int GradeID { get; set; }

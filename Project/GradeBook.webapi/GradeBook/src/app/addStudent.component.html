@@ -1,0 +1,32 @@
+<header>
+  <h1>
+    Add New Student
+  </h1>
+</header>
+<p>
+  <em> Please put information for new student:</em>
+</p>
+<div>
+
+  First Name:
+</div>
+<div>
+  <input id="FirstName" type="text" [(ngModel)]="gradeReport.firstName" />
+</div>
+<div>
+  Last Name:
+</div>
+<div>
+  <input id="LastName" type="text" [(ngModel)]="gradeReport.lastName" placeholder="Enter last name" />
+</div>
+<div>
+  Grade:
+</div>
+<div>
+  <input id="GradeID" type="text" [(ngModel)]="gradeReport.gradeID">
+</div>
+<div>
+  <button (click)="insertClick()">Submit</button>
+</div>
+
+
